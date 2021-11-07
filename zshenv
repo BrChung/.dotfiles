@@ -1,6 +1,8 @@
 # Set Variables
 export NULLCMD=bat
 export HOMEBREW_CASK_OPTS="--no-quarantine"
+export MANPAGER="sh -c 'col -bx | bat -l man -p'"
+
 
 function exists() {
   # `command -v` is similar to `which`
