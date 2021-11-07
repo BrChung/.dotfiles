@@ -7,6 +7,9 @@
 - link:
     ~/.zshrc: zshrc
     ~/.gitconfig: gitconfig
+    ~/.config/bat:
+      create: true
+      path: config/bat
 
 - create:
     - ~/Projects
