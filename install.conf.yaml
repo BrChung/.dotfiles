@@ -13,14 +13,21 @@
       path: config/bat
 
 - create:
-    - ~/Projects
+    - ~/Projects # All git repos should be here
 
 - shell:
     - command: ./scripts/setup_homebrew.zsh
       stdin: true # brew install may ask for password for sudo
       stdout: true
       stderr: true
+      description: Installing Brew and Applications
     - command: ./scripts/setup_zsh.zsh
       stdout: true
       stderr: true
+      description: Setting up ZSH
+    - command: ./scripts/setup_node.zsh
+      stdin: true
+      stdout: true
+      stderr: true
+      description: Setting up Node
 #     - [git submodule update --init --recursive, Installing submodules]
