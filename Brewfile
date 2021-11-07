@@ -12,6 +12,8 @@ brew "go"
 brew "httpie"
 # Lightweight and flexible command-line JSON processor
 brew "jq"
+# Pager program similar to more
+brew "less"
 # Mac App Store command-line interface
 brew "mas"
 # Manage multiple Node.js versions
