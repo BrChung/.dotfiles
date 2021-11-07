@@ -18,5 +18,8 @@ if [[ $response =~ ^(yes|y| ) ]] || [[ -z $response ]]; then
     # Install Global NPM Packages
     npm install -g @angular/cli
     npm install -g hasura-cli
+    npm install -g npmrc
 
+    echo "Global NPM Packages Installed:"
+    npm list --global --depth=0
 fi
