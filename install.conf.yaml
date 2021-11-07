@@ -16,8 +16,11 @@
     - ~/Projects
 
 - shell:
-    - command: ./setup_homebrew.zsh
-      stdin: true
+    - command: ./scripts/setup_homebrew.zsh
+      stdin: true # brew install may ask for password for sudo
+      stdout: true
+      stderr: true
+    - command: ./scripts/setup_zsh.zsh
       stdout: true
       stderr: true
 #     - [git submodule update --init --recursive, Installing submodules]

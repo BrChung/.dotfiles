@@ -101,3 +101,8 @@ source $ZSH/oh-my-zsh.sh
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 alias ls='ls -lAFh'
 alias bbd='brew bundle dump --force --describe'
+# Prety print PATH variable (echo $PATH)
+alias trail='<<<${(F)path}'
+
+# Set Variables
+export NULLCMD=bat
