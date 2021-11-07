@@ -1,3 +1,5 @@
+# Set Variables
+export NULLCMD=bat
 export HOMEBREW_CASK_OPTS="--no-quarantine"
 
 function exists() {

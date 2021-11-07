@@ -4,7 +4,7 @@
     shell:
       stderr: true
 
-- clean: ["~"]
+- clean: ["~", "~/.oh-my-zsh/custom/", "~/.oh-my-zsh/custom/plugins/"]
 
 - link:
     ~/.zshrc: zshrc
@@ -30,4 +30,18 @@
       description: Setting up Node
       stdin: true
       stdout: true
-#     - [git submodule update --init --recursive, Installing submodules]
+    - command: git submodule update --init --recursive
+      description: Installing submodules
+
+# Link Oh My ZSH Plugins
+- link:
+    ~/.oh-my-zsh/custom/aliases.zsh: oh-my-zsh/aliases.zsh
+    ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions:
+      create: true
+      path: oh-my-zsh/plugins/zsh-autosuggestions
+    ~/.oh-my-zsh/custom/plugins/zsh-completions:
+      create: true
+      path: oh-my-zsh/plugins/zsh-completions
+    ~/.oh-my-zsh/custom/plugins/zsh-syntax-highlighting:
+      create: true
+      path: oh-my-zsh/plugins/zsh-syntax-highlighting
