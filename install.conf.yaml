@@ -2,7 +2,7 @@
     link:
       relink: true
 
-# - clean: ["~"]
+- clean: ["~"]
 
 - link:
     ~/.zshrc: zshrc
@@ -10,5 +10,9 @@
 
 - create:
     - ~/Projects
-# - shell:
+
+- shell:
+    - command: ./setup_homebrew.zsh
+      stdout: true
+      stderr: true
 #     - [git submodule update --init --recursive, Installing submodules]
