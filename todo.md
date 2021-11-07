@@ -1,9 +1,10 @@
 install
-gitkraken bat httpie exa
+gitkraken
 
 sync alfred
 
-system pref
 turn of spotlight shortcut
 
 install microsoft suite
+
+https://github.com/lra/mackup
