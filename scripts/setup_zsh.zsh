@@ -4,6 +4,16 @@ echo "\n<<< Starting ZSH Setup >>>\n"
 
 # By this point latest zsh should be installed by brew
 
+# Check if oh-my-zsh is installed
+OMZDIR="$HOME/.oh-my-zsh"
+if [ ! -d "$OMZDIR" ]; then
+  echo 'Installing oh-my-zsh'
+  /bin/sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+else
+  echo 'Updating oh-my-zsh'
+  upgrade_oh_my_zsh
+fi
+
 # Add homebrew zsh as an available login shell option
 # https://stackoverflow.com/a/4749368/1341838
 if grep -Fxq '/usr/local/bin/zsh' '/etc/shells'; then

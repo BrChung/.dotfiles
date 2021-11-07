@@ -70,7 +70,7 @@ ZSH_THEME="awesomepanda"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git osx brew nvm pip python zsh-syntax-highlighting zsh-autosuggestions)
+plugins=(git macos brew nvm pip python zsh-syntax-highlighting zsh-autosuggestions)
 
 source $ZSH/oh-my-zsh.sh
 
