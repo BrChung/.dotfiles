@@ -4,8 +4,8 @@ echo "\n<<< Starting macOS Setup >>>\n"
 
 read "response?Do you wish to overwrite MacOS system preferneces? [y/N] "
 response=${response:l} #tolower
-if [[ $response =~ ^(no|n| ) ]] || [[ -z $response ]]; the
-    exit
+if [[ $response =~ ^(no|n| ) ]] || [[ -z $response ]]; then
+    exit;
 fi
 
 

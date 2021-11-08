@@ -16,6 +16,7 @@
 
 - create:
     - ~/Projects # All git repos should be here
+    - ~/.nvm
 
 - shell:
     - command: ./scripts/setup_homebrew.zsh
@@ -28,6 +29,10 @@
       stdout: true
     - command: ./scripts/setup_node.zsh
       description: Setting up Node
+      stdin: true
+      stdout: true
+    - command: ./scripts/setup_macos.zsh
+      description: Setting up macOS
       stdin: true
       stdout: true
     - command: git submodule update --init --recursive
