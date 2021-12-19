@@ -20,6 +20,8 @@ brew "mas"
 brew "nvm"
 # Interpreted, interactive, object-oriented programming language
 brew "python@3.9"
+# Python interface to Tcl/Tk
+brew "python-tk@3.9"
 # Persistent key-value database, with built-in net interface
 brew "redis", restart_service: true
 # Display directories as trees (with optional color/HTML output)
@@ -48,6 +50,10 @@ cask "google-chrome"
 cask "iterm2"
 # Keyboard customizer
 cask "karabiner-elements"
+# Provides updates to various Microsoft products
+cask "microsoft-auto-update"
+# Office suite
+cask "microsoft-office"
 # Collaboration platform for API development
 cask "postman"
 # Move and resize windows using keyboard shortcuts or snap areas
