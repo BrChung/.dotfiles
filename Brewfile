@@ -8,6 +8,10 @@ brew "bat"
 brew "exa"
 # Open source programming language to build simple/reliable/efficient software
 brew "go"
+# Command-line interface for SQLite
+brew "sqlite"
+# Interpreted, interactive, object-oriented programming language
+brew "python@3.10"
 # User-friendly cURL replacement (command-line HTTP client)
 brew "httpie"
 # Lightweight and flexible command-line JSON processor
@@ -18,8 +22,12 @@ brew "less"
 brew "mas"
 # Manage multiple Node.js versions
 brew "nvm"
+# Object-relational database system
+brew "postgresql"
 # Interpreted, interactive, object-oriented programming language
 brew "python@3.9"
+# Tool Command Language
+brew "tcl-tk"
 # Python interface to Tcl/Tk
 brew "python-tk@3.9"
 # Persistent key-value database, with built-in net interface
