@@ -6,6 +6,8 @@ tap "homebrew/services"
 brew "bat"
 # Modern replacement for 'ls'
 brew "exa"
+# Git extension for versioning large files
+brew "git-lfs"
 # Open source programming language to build simple/reliable/efficient software
 brew "go"
 # Command-line interface for SQLite
