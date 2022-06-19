@@ -12,3 +12,5 @@ function exists() {
   # More explicitly written:
   # command -v $1 1>/dev/null 2>/dev/null
 }
+
+. "$HOME/.cargo/env"

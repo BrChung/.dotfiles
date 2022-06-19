@@ -25,7 +25,7 @@ brew "mas"
 # Manage multiple Node.js versions
 brew "nvm"
 # Object-relational database system
-brew "postgresql"
+brew "postgresql", restart_service: true
 # Interpreted, interactive, object-oriented programming language
 brew "python@3.9"
 # Tool Command Language
@@ -34,6 +34,8 @@ brew "tcl-tk"
 brew "python-tk@3.9"
 # Persistent key-value database, with built-in net interface
 brew "redis", restart_service: true
+# Rust toolchain installer
+brew "rustup-init"
 # Display directories as trees (with optional color/HTML output)
 brew "tree"
 # UNIX shell (command interpreter)

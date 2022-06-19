@@ -50,6 +50,14 @@ My custom dotfiles using oh-my-zsh and dotbot
 - Awesome mac applications
 - Some terminal aliases and functions in oh-my-zsh/aliases.zsh
 
+## Install Rust
+
+Run the following command
+
+```bash
+rustup-init
+```
+
 ## License
 
 The contents of this repository are covered under the [MIT License](LICENSE).
