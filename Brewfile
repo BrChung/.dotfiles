@@ -6,75 +6,61 @@ tap "homebrew/services"
 brew "bat"
 # Modern replacement for 'ls'
 brew "exa"
-# Git extension for versioning large files
-brew "git-lfs"
+# GNU compiler collection
+brew "gcc"
 # Open source programming language to build simple/reliable/efficient software
 brew "go"
-# Command-line interface for SQLite
-brew "sqlite"
-# Interpreted, interactive, object-oriented programming language
-brew "python@3.10"
 # User-friendly cURL replacement (command-line HTTP client)
 brew "httpie"
 # Lightweight and flexible command-line JSON processor
 brew "jq"
 # Pager program similar to more
 brew "less"
+# LLVM's OpenMP runtime library
+brew "libomp"
 # Mac App Store command-line interface
 brew "mas"
 # Manage multiple Node.js versions
 brew "nvm"
-# Object-relational database system
-brew "postgresql", restart_service: true
+# Development kit for the Java programming language
+brew "openjdk"
+# Interpreted, interactive, object-oriented programming language
+brew "python@3.10"
 # Interpreted, interactive, object-oriented programming language
 brew "python@3.9"
-# Tool Command Language
-brew "tcl-tk"
-# Python interface to Tcl/Tk
-brew "python-tk@3.9"
 # Persistent key-value database, with built-in net interface
 brew "redis", restart_service: true
-# Rust toolchain installer
-brew "rustup-init"
 # Display directories as trees (with optional color/HTML output)
 brew "tree"
 # UNIX shell (command interpreter)
 brew "zsh"
 # Application launcher and productivity software
 cask "alfred"
-# Menu bar icon organizer
-cask "bartender"
-# Desktop password and login vault
-cask "bitwarden"
 # Web browser focusing on privacy
 cask "brave-browser"
-# Voice and text chat software
-cask "discord"
-# App to build and share containerized applications and microservices
-cask "docker"
 # Web browser
 cask "firefox"
-# Desktop client for GitHub repositories
-cask "github"
-# Web browser
-cask "google-chrome"
+# HTTP and GraphQL Client
+cask "insomnia"
 # Terminal emulator as alternative to Apple's Terminal app
 cask "iterm2"
+# JetBrains tools manager
+cask "jetbrains-toolbox"
 # Keyboard customizer
 cask "karabiner-elements"
 # Provides updates to various Microsoft products
 cask "microsoft-auto-update"
 # Office suite
 cask "microsoft-office"
-# Collaboration platform for API development
-cask "postman"
 # Move and resize windows using keyboard shortcuts or snap areas
 cask "rectangle"
-# Team communication and collaboration software
-cask "slack"
-# Music streaming service
-cask "spotify"
-# Open-source code editor
-cask "visual-studio-code"
 # Multimedia player
 cask "vlc"
+mas "BetterSnapTool", id: 417375580
+mas "Bitwarden", id: 1352778147
+mas "GarageBand", id: 682658836
+mas "iMovie", id: 408981434
+mas "Keynote", id: 409183694
+mas "Numbers", id: 409203825
+mas "Pages", id: 409201541
+mas "Slack", id: 803453959
