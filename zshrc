@@ -106,3 +106,7 @@ export NVM_DIR="$HOME/.nvm"
 
 # Set Go Path
 export PATH=$PATH:$(go env GOPATH)/bin
+
+export CPLUS_INCLUDE_PATH=/usr/local/include
+
+export LIBRARY_PATH=/usr/local/lib

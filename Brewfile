@@ -4,12 +4,20 @@ tap "homebrew/core"
 tap "homebrew/services"
 # Clone of cat(1) with syntax highlighting and Git integration
 brew "bat"
+# Cross-platform make
+brew "cmake"
+# GNU File, Shell, and Text utilities
+brew "coreutils"
 # Modern replacement for 'ls'
 brew "exa"
 # GNU compiler collection
 brew "gcc"
 # Open source programming language to build simple/reliable/efficient software
 brew "go"
+# Google Testing and Mocking Framework
+brew "googletest"
+# Graph visualization software from AT&T and Bell Labs
+brew "graphviz"
 # User-friendly cURL replacement (command-line HTTP client)
 brew "httpie"
 # Lightweight and flexible command-line JSON processor
@@ -32,6 +40,8 @@ brew "python@3.9"
 brew "redis", restart_service: true
 # Display directories as trees (with optional color/HTML output)
 brew "tree"
+# Internet file retriever
+brew "wget"
 # UNIX shell (command interpreter)
 brew "zsh"
 # Application launcher and productivity software
@@ -61,6 +71,8 @@ mas "Bitwarden", id: 1352778147
 mas "GarageBand", id: 682658836
 mas "iMovie", id: 408981434
 mas "Keynote", id: 409183694
+mas "Logic Pro", id: 634148309
 mas "Numbers", id: 409203825
 mas "Pages", id: 409201541
 mas "Slack", id: 803453959
+mas "WireGuard", id: 1451685025
