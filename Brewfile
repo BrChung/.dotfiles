@@ -1,7 +1,5 @@
 tap "aws/tap"
 tap "homebrew/bundle"
-tap "homebrew/cask"
-tap "homebrew/core"
 tap "homebrew/services"
 # Zstandard is a real-time compression algorithm
 brew "zstd"
@@ -15,8 +13,14 @@ brew "webp"
 brew "jpeg-xl"
 # Codec library for encoding and decoding AV1 video streams
 brew "aom"
+# Interpreted, interactive, object-oriented programming language
+brew "python@3.8"
+# CLI tool to build, test, debug, and deploy Serverless applications using AWS SAM
+brew "aws-sam-cli"
 # Clone of cat(1) with syntax highlighting and Git integration
 brew "bat"
+# Manage compile and link flags for libraries
+brew "pkg-config"
 # Cross-platform make
 brew "cmake"
 # GNU File, Shell, and Text utilities
@@ -25,6 +29,8 @@ brew "coreutils"
 brew "exa"
 # GNU compiler collection
 brew "gcc"
+# Library for encoding and decoding .avif files
+brew "libavif"
 # Graphics library to dynamically manipulate images
 brew "gd"
 # Toolkit for image loading and pixel buffer manipulation
@@ -39,6 +45,10 @@ brew "go"
 brew "googletest"
 # Image manipulation
 brew "netpbm"
+# GNU triangulated surface library
+brew "gts"
+# OpenType text shaping engine
+brew "harfbuzz"
 # Library to render SVG files using Cairo
 brew "librsvg"
 # Graph visualization software from AT&T and Bell Labs
@@ -59,8 +69,8 @@ brew "mas"
 brew "nvm"
 # Development kit for the Java programming language
 brew "openjdk"
-# Cryptography and SSL/TLS Toolkit
-brew "openssl@3", link: false
+# PDF rendering library (based on the xpdf-3.0 code base)
+brew "poppler"
 # Interpreted, interactive, object-oriented programming language
 brew "python@3.10"
 # Interpreted, interactive, object-oriented programming language
@@ -73,10 +83,10 @@ brew "tree"
 brew "wget"
 # UNIX shell (command interpreter)
 brew "zsh"
-# AWS SAM CLI 🐿 is a tool for local development and testing of Serverless applications
-brew "aws/tap/aws-sam-cli"
 # Application launcher and productivity software
 cask "alfred"
+# Chromium based browser
+cask "arc"
 # Web browser focusing on privacy
 cask "brave-browser"
 # Utilities designed to make common development tasks easier
