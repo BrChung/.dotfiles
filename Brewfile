@@ -25,8 +25,12 @@ brew "pkg-config"
 brew "cmake"
 # GNU File, Shell, and Text utilities
 brew "coreutils"
+# Configurable talking characters in ASCII art
+brew "cowsay"
 # Modern replacement for 'ls'
 brew "exa"
+# Command-line tools for fly.io services
+brew "flyctl"
 # GNU compiler collection
 brew "gcc"
 # Library for encoding and decoding .avif files
@@ -65,6 +69,8 @@ brew "less"
 brew "libomp"
 # Mac App Store command-line interface
 brew "mas"
+# MongoDB Shell to connect, configure, query, and work with your MongoDB database
+brew "mongosh"
 # Manage multiple Node.js versions
 brew "nvm"
 # Development kit for the Java programming language
@@ -77,6 +83,8 @@ brew "python@3.10"
 brew "python@3.9"
 # Persistent key-value database, with built-in net interface
 brew "redis", restart_service: true
+# Prints a steam locomotive if you type sl instead of ls
+brew "sl"
 # Display directories as trees (with optional color/HTML output)
 brew "tree"
 # Internet file retriever
@@ -99,7 +107,7 @@ cask "insomnia"
 cask "iterm2"
 # JetBrains tools manager
 cask "jetbrains-toolbox"
-# Keyboard customizer
+# Keyboard customiser
 cask "karabiner-elements"
 # Provides updates to various Microsoft products
 cask "microsoft-auto-update"
@@ -109,6 +117,8 @@ cask "microsoft-office"
 cask "rectangle"
 # Multimedia player
 cask "vlc"
+# Network protocol analyzer
+cask "wireshark"
 mas "BetterSnapTool", id: 417375580
 mas "Bitwarden", id: 1352778147
 mas "GarageBand", id: 682658836
@@ -122,32 +132,34 @@ mas "WireGuard", id: 1451685025
 mas "Xcode", id: 497799835
 vscode "akamud.vscode-theme-onedark"
 vscode "alexcvzz.vscode-sqlite"
-vscode "Angular.ng-template"
-vscode "bbenoist.Nix"
+vscode "angular.ng-template"
+vscode "bbenoist.nix"
 vscode "bradlc.vscode-tailwindcss"
 vscode "csstools.postcss"
-vscode "Dart-Code.dart-code"
-vscode "Dart-Code.flutter"
+vscode "dart-code.dart-code"
+vscode "dart-code.flutter"
 vscode "dbaeumer.vscode-eslint"
-vscode "DiemasMichiels.emulate"
+vscode "diemasmichiels.emulate"
 vscode "eamodio.gitlens"
 vscode "esbenp.prettier-vscode"
 vscode "firsttris.vscode-jest-runner"
 vscode "formulahendry.code-runner"
 vscode "golang.go"
-vscode "GraphQL.vscode-graphql"
-vscode "GraphQL.vscode-graphql-execution"
-vscode "GraphQL.vscode-graphql-syntax"
+vscode "graphql.vscode-graphql"
+vscode "graphql.vscode-graphql-execution"
+vscode "graphql.vscode-graphql-syntax"
 vscode "janisdd.vscode-edit-csv"
 vscode "joaompinto.vscode-graphviz"
-vscode "johnpapa.Angular2"
+vscode "johnpapa.angular2"
 vscode "kdarkhan.mips"
+vscode "ms-azuretools.vscode-azureresourcegroups"
 vscode "ms-azuretools.vscode-docker"
 vscode "ms-mssql.data-workspace-vscode"
 vscode "ms-mssql.mssql"
 vscode "ms-mssql.sql-bindings-vscode"
 vscode "ms-mssql.sql-database-projects-vscode"
 vscode "ms-python.black-formatter"
+vscode "ms-python.debugpy"
 vscode "ms-python.isort"
 vscode "ms-python.python"
 vscode "ms-toolsai.jupyter"
@@ -162,21 +174,22 @@ vscode "ms-vscode.azure-account"
 vscode "ms-vscode.cpptools"
 vscode "ms-vscode.remote-explorer"
 vscode "ms-vsliveshare.vsliveshare"
-vscode "Nash.awesome-flutter-snippets"
+vscode "nash.awesome-flutter-snippets"
 vscode "nrwl.angular-console"
-vscode "PKief.material-icon-theme"
+vscode "pkief.material-icon-theme"
 vscode "quicktype.quicktype"
 vscode "redhat.vscode-commons"
 vscode "redhat.vscode-yaml"
 vscode "rights.nas-vscode"
-vscode "ritwickdey.LiveServer"
+vscode "ritwickdey.liveserver"
+vscode "shd101wyy.markdown-preview-enhanced"
 vscode "silvenon.mdx"
 vscode "styled-components.vscode-styled-components"
 vscode "svelte.svelte-vscode"
 vscode "syler.sass-indented"
 vscode "tintinweb.graphviz-interactive-preview"
 vscode "tomoki1207.pdf"
-vscode "Vue.volar"
-vscode "WallabyJs.quokka-vscode"
+vscode "vue.volar"
+vscode "wallabyjs.quokka-vscode"
 vscode "wix.vscode-import-cost"
 vscode "yoavbls.pretty-ts-errors"
