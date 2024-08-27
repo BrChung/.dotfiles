@@ -16,19 +16,19 @@ fi
 
 # Add homebrew zsh as an available login shell option
 # https://stackoverflow.com/a/4749368/1341838
-if grep -Fxq $(which zsh) '/etc/shells'; then
-  echo "$(which zsh) already exists in /etc/shells"
+if grep -Fxq "$HOMEBREW_PREFIX/bin/zsh" '/etc/shells'; then
+  echo "$HOMEBREW_PREFIX/bin/zsh already exists in /etc/shells"
 else
   echo "Enter superuser (sudo) password to edit /etc/shells"
-  echo "$(which zsh)" | sudo tee -a '/etc/shells' >/dev/null
+  echo "$HOMEBREW_PREFIX/bin/zsh" | sudo tee -a '/etc/shells' >/dev/null
 fi
 
 # Change shell to zsh installed by homebrew
-if [ "$SHELL" = $(which zsh) ]; then
-  echo "$SHELL is already $(which zsh)"
+if [ "$SHELL" = "$HOMEBREW_PREFIX/bin/zsh" ]; then
+  echo "$SHELL is already $HOMEBREW_PREFIX/bin/zsh"
 else
   echo "Enter user password to change login shell"
-  chsh -s $(which zsh)
+  chsh -s "$HOMEBREW_PREFIX/bin/zsh"
 fi
 
 # Use ZSH instead of BASH for detault shell
