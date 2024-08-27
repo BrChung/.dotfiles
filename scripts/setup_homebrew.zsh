@@ -13,4 +13,4 @@ fi
 # Install from Brewfile
 # TODO: Custom brew files for configs
 
-brew bundle --verbose
+brew bundle --verbose --cleanup
