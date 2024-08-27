@@ -9,7 +9,6 @@ install microsoft suite
 
 https://github.com/lra/mackup
 
-TODO:
-
-- add github desktop
-- add spotify
+Add script:
+brew outdated --cask --greedy --verbose
+brew upgrade --cask --greedy
