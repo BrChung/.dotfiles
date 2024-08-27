@@ -5,7 +5,7 @@ echo "\n<<< Starting Node Setup >>>\n"
 # Node versions are managed with `nvm`, which is in the Brewfile.
 if [ -z "$(ls -A $NVM_DIR/versions/node)" ]; then
     echo "No node versions found, you can install latest and continue installation by using:"
-    echo "nvm install -lts && zsh scripts/setup_node.zsh"
+    echo "nvm install --lts && zsh scripts/setup_node.zsh"
     exit
 else
     echo "Found node installation"
