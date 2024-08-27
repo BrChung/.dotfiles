@@ -93,12 +93,22 @@ brew "zsh"
 cask "alfred"
 # Chromium based browser
 cask "arc"
+# 3D model slicing software for 3D printers, maintained by Bambu Lab
+cask "bambu-studio"
+# Menu bar icon organiser
+cask "bartender"
 # Web browser focusing on privacy
 cask "brave-browser"
 # Utilities designed to make common development tasks easier
 cask "devtoys"
+# Voice and text chat software
+cask "discord"
 # Web browser
 cask "firefox"
+# Desktop client for GitHub repositories
+cask "github"
+# Web browser
+cask "google-chrome"
 # HTTP and GraphQL Client
 cask "insomnia"
 # Terminal emulator as alternative to Apple's Terminal app
@@ -113,11 +123,14 @@ cask "microsoft-auto-update"
 cask "microsoft-office"
 # Move and resize windows using keyboard shortcuts or snap areas
 cask "rectangle"
+# Music streaming service
+cask "spotify"
+# Open-source code editor
+cask "visual-studio-code"
 # Multimedia player
 cask "vlc"
 # Network protocol analyzer
 cask "wireshark"
-mas "BetterSnapTool", id: 417375580
 mas "Bitwarden", id: 1352778147
 mas "GarageBand", id: 682658836
 mas "iMovie", id: 408981434
