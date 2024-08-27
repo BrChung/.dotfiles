@@ -110,7 +110,8 @@ export PATH=$PATH:$(go env GOPATH)/bin
 export CPLUS_INCLUDE_PATH=/usr/local/include
 
 export LIBRARY_PATH=/usr/local/lib
+
 # pnpm
-export PNPM_HOME="/Users/brianchung/Library/pnpm"
+export PNPM_HOME="$HOME/Library/pnpm"
 export PATH="$PNPM_HOME:$PATH"
 # pnpm end
