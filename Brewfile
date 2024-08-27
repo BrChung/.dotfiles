@@ -15,6 +15,10 @@ brew "jpeg-xl"
 brew "aom"
 # CLI tool to build, test, debug, and deploy Serverless applications using AWS SAM
 brew "aws-sam-cli"
+# Interpreted, interactive, object-oriented programming language
+brew "python@3.11"
+# Official Amazon AWS command-line interface
+brew "awscli", link: false
 # Clone of cat(1) with syntax highlighting and Git integration
 brew "bat"
 # Cross-platform make
@@ -74,8 +78,6 @@ brew "poppler"
 # Interpreted, interactive, object-oriented programming language
 brew "python@3.10"
 # Interpreted, interactive, object-oriented programming language
-brew "python@3.11"
-# Interpreted, interactive, object-oriented programming language
 brew "python@3.8"
 # Interpreted, interactive, object-oriented programming language
 brew "python@3.9"
@@ -103,6 +105,8 @@ cask "brave-browser"
 cask "devtoys"
 # Voice and text chat software
 cask "discord"
+# App to build and share containerised applications and microservices
+cask "docker"
 # Web browser
 cask "firefox"
 cask "font-hack-nerd-font"
@@ -116,8 +120,6 @@ cask "insomnia"
 cask "iterm2"
 # JetBrains tools manager
 cask "jetbrains-toolbox"
-# Keyboard customiser
-cask "karabiner-elements"
 # Provides updates to various Microsoft products
 cask "microsoft-auto-update"
 # Office suite
@@ -151,20 +153,15 @@ vscode "csstools.postcss"
 vscode "dart-code.dart-code"
 vscode "dart-code.flutter"
 vscode "dbaeumer.vscode-eslint"
-vscode "diemasmichiels.emulate"
 vscode "eamodio.gitlens"
 vscode "esbenp.prettier-vscode"
-vscode "firsttris.vscode-jest-runner"
 vscode "golang.go"
 vscode "graphql.vscode-graphql"
 vscode "graphql.vscode-graphql-execution"
 vscode "graphql.vscode-graphql-syntax"
 vscode "janisdd.vscode-edit-csv"
 vscode "johnpapa.angular2"
-vscode "kdarkhan.mips"
 vscode "ms-azuretools.vscode-docker"
-vscode "ms-mssql.mssql"
-vscode "ms-mssql.sql-bindings-vscode"
 vscode "ms-python.debugpy"
 vscode "ms-python.isort"
 vscode "ms-python.python"
@@ -184,10 +181,7 @@ vscode "pkief.material-icon-theme"
 vscode "quicktype.quicktype"
 vscode "redhat.vscode-commons"
 vscode "redhat.vscode-yaml"
-vscode "rights.nas-vscode"
-vscode "ritwickdey.liveserver"
 vscode "shd101wyy.markdown-preview-enhanced"
-vscode "silvenon.mdx"
 vscode "styled-components.vscode-styled-components"
 vscode "svelte.svelte-vscode"
 vscode "syler.sass-indented"
