@@ -59,6 +59,8 @@ brew "jq"
 brew "less"
 # LLVM's OpenMP runtime library
 brew "libomp"
+# Clone of ls with colorful output, file type icons, and more
+brew "lsd"
 # Mac App Store command-line interface
 brew "mas"
 # MongoDB Shell to connect, configure, query, and work with your MongoDB database
