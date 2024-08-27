@@ -13,22 +13,16 @@ brew "webp"
 brew "jpeg-xl"
 # Codec library for encoding and decoding AV1 video streams
 brew "aom"
-# Interpreted, interactive, object-oriented programming language
-brew "python@3.8"
 # CLI tool to build, test, debug, and deploy Serverless applications using AWS SAM
 brew "aws-sam-cli"
 # Clone of cat(1) with syntax highlighting and Git integration
 brew "bat"
-# Manage compile and link flags for libraries
-brew "pkg-config"
 # Cross-platform make
 brew "cmake"
 # GNU File, Shell, and Text utilities
 brew "coreutils"
 # Configurable talking characters in ASCII art
 brew "cowsay"
-# Modern replacement for 'ls'
-brew "exa"
 # Command-line tools for fly.io services
 brew "flyctl"
 # GNU compiler collection
@@ -57,8 +51,6 @@ brew "harfbuzz"
 brew "librsvg"
 # Graph visualization software from AT&T and Bell Labs
 brew "graphviz"
-# Interpreted, interactive, object-oriented programming language
-brew "python@3.11"
 # User-friendly cURL replacement (command-line HTTP client)
 brew "httpie"
 # Lightweight and flexible command-line JSON processor
@@ -75,10 +67,16 @@ brew "mongosh"
 brew "nvm"
 # Development kit for the Java programming language
 brew "openjdk"
+# Manage compile and link flags for libraries
+brew "pkg-config"
 # PDF rendering library (based on the xpdf-3.0 code base)
 brew "poppler"
 # Interpreted, interactive, object-oriented programming language
 brew "python@3.10"
+# Interpreted, interactive, object-oriented programming language
+brew "python@3.11"
+# Interpreted, interactive, object-oriented programming language
+brew "python@3.8"
 # Interpreted, interactive, object-oriented programming language
 brew "python@3.9"
 # Persistent key-value database, with built-in net interface
