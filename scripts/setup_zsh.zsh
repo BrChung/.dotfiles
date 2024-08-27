@@ -28,7 +28,7 @@ if [ "$SHELL" = '/usr/local/bin/zsh' ]; then
   echo '$SHELL is already /usr/local/bin/zsh'
 else
   echo "Enter user password to change login shell"
-  chsh -s '/usr/local/bin/zsh'
+  chsh -s $(which zsh)
 fi
 
 # Use ZSH instead of BASH for detault shell
