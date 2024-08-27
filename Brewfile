@@ -105,6 +105,7 @@ cask "devtoys"
 cask "discord"
 # Web browser
 cask "firefox"
+cask "font-hack-nerd-font"
 # Desktop client for GitHub repositories
 cask "github"
 # Web browser
