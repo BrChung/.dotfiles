@@ -87,6 +87,8 @@ brew "redis", restart_service: true
 brew "sl"
 # Display directories as trees (with optional color/HTML output)
 brew "tree"
+# Sends magic packets to wake up network-devices
+brew "wakeonlan"
 # Internet file retriever
 brew "wget"
 # UNIX shell (command interpreter)
