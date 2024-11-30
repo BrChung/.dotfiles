@@ -13,3 +13,6 @@ git submodule update --remote --recursive
 fix nerd icons
 
 sync vscode settings
+
+-go installs
+go install github.com/air-verse/air@latest

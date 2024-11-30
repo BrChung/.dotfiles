@@ -1,4 +1,5 @@
 tap "aws/tap"
+tap "bell-sw/liberica"
 tap "homebrew/bundle"
 tap "homebrew/services"
 # Zstandard is a real-time compression algorithm
@@ -16,17 +17,21 @@ brew "aom"
 # CLI tool to build, test, debug, and deploy Serverless applications using AWS SAM
 brew "aws-sam-cli"
 # Interpreted, interactive, object-oriented programming language
-brew "python@3.11"
+brew "python@3.12"
 # Official Amazon AWS command-line interface
-brew "awscli", link: false
+brew "awscli"
 # Clone of cat(1) with syntax highlighting and Git integration
 brew "bat"
+# Core application library for C
+brew "glib"
 # Cross-platform make
 brew "cmake"
 # GNU File, Shell, and Text utilities
 brew "coreutils"
 # Configurable talking characters in ASCII art
 brew "cowsay"
+# Secure runtime for JavaScript and TypeScript
+brew "deno"
 # Command-line tools for fly.io services
 brew "flyctl"
 # GNU compiler collection
@@ -65,18 +70,24 @@ brew "librsvg"
 brew "lsd"
 # Mac App Store command-line interface
 brew "mas"
+# Development kit for the Java programming language
+brew "openjdk"
+# Java-based project management
+brew "maven"
 # MongoDB Shell to connect, configure, query, and work with your MongoDB database
 brew "mongosh"
 # Manage multiple Node.js versions
 brew "nvm"
-# Development kit for the Java programming language
-brew "openjdk"
-# Manage compile and link flags for libraries
-brew "pkg-config"
+# Package compiler and linker metadata toolkit
+brew "pkgconf"
+# Fast, disk space efficient package manager
+brew "pnpm"
 # PDF rendering library (based on the xpdf-3.0 code base)
 brew "poppler"
 # Interpreted, interactive, object-oriented programming language
 brew "python@3.10"
+# Interpreted, interactive, object-oriented programming language
+brew "python@3.11"
 # Interpreted, interactive, object-oriented programming language
 brew "python@3.8"
 # Interpreted, interactive, object-oriented programming language
@@ -97,6 +108,8 @@ brew "zsh"
 cask "alfred"
 # Chromium based browser
 cask "arc"
+# Integrated CAD, CAM, CAE, and PCB software
+cask "autodesk-fusion"
 # 3D model slicing software for 3D printers, maintained by Bambu Lab
 cask "bambu-studio"
 # Menu bar icon organiser
@@ -122,6 +135,8 @@ cask "insomnia"
 cask "iterm2"
 # JetBrains tools manager
 cask "jetbrains-toolbox"
+# 100% open-source Java implementation
+cask "liberica-jdk21"
 # Provides updates to various Microsoft products
 cask "microsoft-auto-update"
 # Office suite
@@ -130,6 +145,8 @@ cask "microsoft-office"
 cask "rectangle"
 # Music streaming service
 cask "spotify"
+# Mesh VPN based on WireGuard
+cask "tailscale"
 # Open-source code editor
 cask "visual-studio-code"
 # Multimedia player
@@ -157,6 +174,8 @@ vscode "dart-code.flutter"
 vscode "dbaeumer.vscode-eslint"
 vscode "eamodio.gitlens"
 vscode "esbenp.prettier-vscode"
+vscode "github.copilot"
+vscode "github.copilot-chat"
 vscode "golang.go"
 vscode "graphql.vscode-graphql"
 vscode "graphql.vscode-graphql-execution"
@@ -189,6 +208,5 @@ vscode "svelte.svelte-vscode"
 vscode "syler.sass-indented"
 vscode "tomoki1207.pdf"
 vscode "vue.volar"
-vscode "wallabyjs.quokka-vscode"
 vscode "wix.vscode-import-cost"
 vscode "yoavbls.pretty-ts-errors"
