@@ -28,7 +28,7 @@ brew "glib"
 brew "cmake"
 # GNU File, Shell, and Text utilities
 brew "coreutils"
-# Configurable talking characters in ASCII art
+# Apjanke's fork of the classic cowsay project
 brew "cowsay"
 # Secure runtime for JavaScript and TypeScript
 brew "deno"
@@ -93,7 +93,7 @@ brew "python@3.8"
 # Interpreted, interactive, object-oriented programming language
 brew "python@3.9"
 # Persistent key-value database, with built-in net interface
-brew "redis", restart_service: true
+brew "redis", restart_service: :changed
 # Prints a steam locomotive if you type sl instead of ls
 brew "sl"
 # Display directories as trees (with optional color/HTML output)
@@ -104,8 +104,6 @@ brew "wakeonlan"
 brew "wget"
 # UNIX shell (command interpreter)
 brew "zsh"
-# Application launcher and productivity software
-cask "alfred"
 # Chromium based browser
 cask "arc"
 # Integrated CAD, CAM, CAE, and PCB software
@@ -120,6 +118,8 @@ cask "brave-browser"
 cask "devtoys"
 # Voice and text chat software
 cask "discord"
+# Utility to fix a common scroll wheel problem
+cask "discretescroll"
 # App to build and share containerised applications and microservices
 cask "docker"
 # Web browser
@@ -141,6 +141,8 @@ cask "liberica-jdk21"
 cask "microsoft-auto-update"
 # Office suite
 cask "microsoft-office"
+# Control your tools with a few keystrokes
+cask "raycast"
 # Move and resize windows using keyboard shortcuts or snap areas
 cask "rectangle"
 # Music streaming service
