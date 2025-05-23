@@ -32,6 +32,12 @@ brew "coreutils"
 brew "cowsay"
 # Secure runtime for JavaScript and TypeScript
 brew "deno"
+# OpenType text shaping engine
+brew "harfbuzz"
+# Library for JPEG-2000 image manipulation
+brew "openjpeg"
+# Play, record, convert, and stream audio and video
+brew "ffmpeg"
 # Command-line tools for fly.io services
 brew "flyctl"
 # GNU compiler collection
@@ -42,10 +48,8 @@ brew "libavif"
 brew "gd"
 # Toolkit for image loading and pixel buffer manipulation
 brew "gdk-pixbuf"
-# Library for JPEG-2000 image manipulation
-brew "openjpeg"
 # Interpreter for PostScript and PDF
-brew "ghostscript", link: false
+brew "ghostscript"
 # Open source programming language to build simple/reliable/efficient software
 brew "go"
 # Google Testing and Mocking Framework
@@ -54,8 +58,6 @@ brew "googletest"
 brew "netpbm"
 # GNU triangulated surface library
 brew "gts"
-# OpenType text shaping engine
-brew "harfbuzz"
 # User-friendly cURL replacement (command-line HTTP client)
 brew "httpie"
 # Lightweight and flexible command-line JSON processor
@@ -102,6 +104,8 @@ brew "tree"
 brew "wakeonlan"
 # Internet file retriever
 brew "wget"
+# Feature-rich command-line audio/video downloader
+brew "yt-dlp"
 # UNIX shell (command interpreter)
 brew "zsh"
 # Chromium based browser
@@ -114,6 +118,8 @@ cask "bambu-studio"
 cask "bartender"
 # Web browser focusing on privacy
 cask "brave-browser"
+# Write, edit, and chat about your code with AI
+cask "cursor"
 # Utilities designed to make common development tasks easier
 cask "devtoys"
 # Voice and text chat software
@@ -155,16 +161,6 @@ cask "visual-studio-code"
 cask "vlc"
 # Network protocol analyzer
 cask "wireshark"
-mas "Bitwarden", id: 1352778147
-mas "GarageBand", id: 682658836
-mas "iMovie", id: 408981434
-mas "Keynote", id: 409183694
-mas "Logic Pro", id: 634148309
-mas "Numbers", id: 409203825
-mas "Pages", id: 409201541
-mas "Slack", id: 803453959
-mas "WireGuard", id: 1451685025
-mas "Xcode", id: 497799835
 vscode "akamud.vscode-theme-onedark"
 vscode "alexcvzz.vscode-sqlite"
 vscode "angular.ng-template"
@@ -174,6 +170,7 @@ vscode "csstools.postcss"
 vscode "dart-code.dart-code"
 vscode "dart-code.flutter"
 vscode "dbaeumer.vscode-eslint"
+vscode "docker.docker"
 vscode "eamodio.gitlens"
 vscode "esbenp.prettier-vscode"
 vscode "github.copilot"
@@ -188,6 +185,7 @@ vscode "ms-azuretools.vscode-docker"
 vscode "ms-python.debugpy"
 vscode "ms-python.isort"
 vscode "ms-python.python"
+vscode "ms-python.vscode-pylance"
 vscode "ms-toolsai.jupyter"
 vscode "ms-toolsai.jupyter-keymap"
 vscode "ms-toolsai.jupyter-renderers"
