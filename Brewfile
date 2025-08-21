@@ -98,8 +98,12 @@ brew "python@3.9"
 brew "redis", restart_service: :changed
 # Prints a steam locomotive if you type sl instead of ls
 brew "sl"
+# Generate type safe Go from SQL
+brew "sqlc"
 # Display directories as trees (with optional color/HTML output)
 brew "tree"
+# Syntax-aware linter for prose
+brew "vale"
 # Sends magic packets to wake up network-devices
 brew "wakeonlan"
 # Internet file retriever
@@ -118,6 +122,8 @@ cask "bambu-studio"
 cask "bartender"
 # Web browser focusing on privacy
 cask "brave-browser"
+# Open source IDE for exploring and testing APIs
+cask "bruno"
 # Write, edit, and chat about your code with AI
 cask "cursor"
 # Utilities designed to make common development tasks easier
@@ -127,10 +133,12 @@ cask "discord"
 # Utility to fix a common scroll wheel problem
 cask "discretescroll"
 # App to build and share containerised applications and microservices
-cask "docker"
+cask "docker-desktop"
 # Web browser
 cask "firefox"
+cask "font-geist-mono"
 cask "font-hack-nerd-font"
+cask "font-jetbrains-mono-nerd-font"
 # Desktop client for GitHub repositories
 cask "github"
 # Web browser
@@ -147,6 +155,10 @@ cask "liberica-jdk21"
 cask "microsoft-auto-update"
 # Office suite
 cask "microsoft-office"
+# GameStream client
+cask "moonlight"
+# Knowledge base that works on top of a local folder of plain text Markdown files
+cask "obsidian"
 # Control your tools with a few keystrokes
 cask "raycast"
 # Move and resize windows using keyboard shortcuts or snap areas
@@ -154,13 +166,17 @@ cask "rectangle"
 # Music streaming service
 cask "spotify"
 # Mesh VPN based on WireGuard
-cask "tailscale"
+cask "tailscale-app"
 # Open-source code editor
 cask "visual-studio-code"
 # Multimedia player
 cask "vlc"
 # Network protocol analyzer
-cask "wireshark"
+cask "wireshark-app"
+# Gecko based web browser
+cask "zen"
+# Video communication and virtual meeting platform
+cask "zoom"
 vscode "akamud.vscode-theme-onedark"
 vscode "alexcvzz.vscode-sqlite"
 vscode "angular.ng-template"
@@ -181,11 +197,13 @@ vscode "graphql.vscode-graphql-execution"
 vscode "graphql.vscode-graphql-syntax"
 vscode "janisdd.vscode-edit-csv"
 vscode "johnpapa.angular2"
+vscode "ms-azuretools.vscode-containers"
 vscode "ms-azuretools.vscode-docker"
 vscode "ms-python.debugpy"
 vscode "ms-python.isort"
 vscode "ms-python.python"
 vscode "ms-python.vscode-pylance"
+vscode "ms-python.vscode-python-envs"
 vscode "ms-toolsai.jupyter"
 vscode "ms-toolsai.jupyter-keymap"
 vscode "ms-toolsai.jupyter-renderers"
