@@ -26,6 +26,8 @@ brew "bat"
 brew "glib"
 # Cross-platform make
 brew "cmake"
+# Container runtimes on MacOS (and Linux) with minimal setup
+brew "colima"
 # GNU File, Shell, and Text utilities
 brew "coreutils"
 # Apjanke's fork of the classic cowsay project
@@ -132,8 +134,6 @@ cask "devtoys"
 cask "discord"
 # Utility to fix a common scroll wheel problem
 cask "discretescroll"
-# App to build and share containerised applications and microservices
-cask "docker-desktop"
 # Web browser
 cask "firefox"
 cask "font-geist-mono"
