@@ -27,13 +27,15 @@ brew "glib"
 # Cross-platform make
 brew "cmake"
 # Container runtimes on MacOS (and Linux) with minimal setup
-brew "colima"
+brew "colima", restart_service: :changed
 # GNU File, Shell, and Text utilities
 brew "coreutils"
 # Apjanke's fork of the classic cowsay project
 brew "cowsay"
 # Secure runtime for JavaScript and TypeScript
 brew "deno"
+# Pack, ship and run any application as a lightweight container
+brew "docker"
 # OpenType text shaping engine
 brew "harfbuzz"
 # Library for JPEG-2000 image manipulation
