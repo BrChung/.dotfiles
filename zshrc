@@ -105,6 +105,9 @@ export NVM_DIR="$HOME/.nvm"
 [ -s "$HOMEBREW_PREFIX/opt/nvm/nvm.sh" ] && \. "$HOMEBREW_PREFIX/opt/nvm/nvm.sh"  # This loads nvm
 [ -s "$HOMEBREW_PREFIX/opt/nvm/etc/bash_completion.d/nvm" ] && \. "$HOMEBREW_PREFIX/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
 
+# Rust
+[ -s "$HOME/.cargo/env" ] && . "$HOME/.cargo/env"
+
 # Set Go Path
 export PATH=$PATH:$(go env GOPATH)/bin
 
@@ -116,3 +119,6 @@ export LIBRARY_PATH=/usr/local/lib
 export PNPM_HOME="$HOME/Library/pnpm"
 export PATH="$PNPM_HOME:$PATH"
 # pnpm end
+
+# direnv
+eval "$(direnv hook zsh)"

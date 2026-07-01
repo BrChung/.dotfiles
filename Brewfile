@@ -2,6 +2,7 @@ tap "aws/tap"
 tap "bell-sw/liberica"
 tap "homebrew/bundle"
 tap "homebrew/services"
+tap "pulumi/tap"
 # Zstandard is a real-time compression algorithm
 brew "zstd"
 # TIFF library and utilities
@@ -34,13 +35,15 @@ brew "coreutils"
 brew "cowsay"
 # Secure runtime for JavaScript and TypeScript
 brew "deno"
+# Load/unload environment variables based on $PWD
+brew "direnv"
 # Pack, ship and run any application as a lightweight container
 brew "docker"
 # OpenType text shaping engine
 brew "harfbuzz"
 # Library for JPEG-2000 image manipulation
 brew "openjpeg"
-# Play, record, convert, and stream audio and video
+# Play, record, convert, and stream select audio and video codecs
 brew "ffmpeg"
 # Command-line tools for fly.io services
 brew "flyctl"
@@ -100,6 +103,8 @@ brew "python@3.8"
 brew "python@3.9"
 # Persistent key-value database, with built-in net interface
 brew "redis", restart_service: :changed
+# Safe, concurrent, practical language
+brew "rust"
 # Prints a steam locomotive if you type sl instead of ls
 brew "sl"
 # Generate type safe Go from SQL
@@ -145,6 +150,8 @@ cask "font-jetbrains-mono-nerd-font"
 cask "github"
 # Web browser
 cask "google-chrome"
+# Chromium-based web browser
+cask "helium-browser"
 # HTTP and GraphQL Client
 cask "insomnia"
 # Terminal emulator as alternative to Apple's Terminal app
@@ -152,7 +159,7 @@ cask "iterm2"
 # JetBrains tools manager
 cask "jetbrains-toolbox"
 # 100% open-source Java implementation
-cask "liberica-jdk21"
+cask "bell-sw/liberica/liberica-jdk21"
 # Provides updates to various Microsoft products
 cask "microsoft-auto-update"
 # Office suite
@@ -191,7 +198,6 @@ vscode "dbaeumer.vscode-eslint"
 vscode "docker.docker"
 vscode "eamodio.gitlens"
 vscode "esbenp.prettier-vscode"
-vscode "github.copilot"
 vscode "github.copilot-chat"
 vscode "golang.go"
 vscode "graphql.vscode-graphql"
@@ -230,3 +236,7 @@ vscode "tomoki1207.pdf"
 vscode "vue.volar"
 vscode "wix.vscode-import-cost"
 vscode "yoavbls.pretty-ts-errors"
+go "github.com/air-verse/air"
+go "golang.org/x/tools/gopls"
+go "honnef.co/go/tools/cmd/staticcheck"
+npm "corepack"
