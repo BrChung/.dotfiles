@@ -24,6 +24,39 @@ ensure_brew_shellenv_in_zprofile() {
   return 1
 }
 
+vscode_code() {
+  if command -v code &>/dev/null; then
+    code "$@"
+  elif [[ -x "/Applications/Visual Studio Code.app/Contents/Resources/app/bin/code" ]]; then
+    "/Applications/Visual Studio Code.app/Contents/Resources/app/bin/code" "$@"
+  else
+    return 1
+  fi
+}
+
+retry_flaky_bundle_installs() {
+  local failed=0
+
+  if ! brew list zstd &>/dev/null; then
+    echo "Retrying zstd install..."
+    brew install zstd || failed=1
+  fi
+
+  if ! vscode_code --version &>/dev/null; then
+    echo "VS Code CLI not available — skipping extension retries"
+  else
+    local ext
+    for ext in ms-python.python ms-python.debugpy ms-toolsai.jupyter dart-code.dart-code; do
+      if ! vscode_code --list-extensions 2>/dev/null | grep -Fxq "$ext"; then
+        echo "Retrying VS Code extension: $ext"
+        vscode_code --install-extension "$ext" || failed=1
+      fi
+    done
+  fi
+
+  return $failed
+}
+
 if command -v brew &>/dev/null; then
   echo "brew exists, skipping install"
 else
@@ -39,12 +72,17 @@ if ! command -v brew &>/dev/null; then
   exit 1
 fi
 
-# Install from Brewfile
-# TODO: Custom brew files for configs
-
 # Homebrew 5+ requires trusting third-party casks before install
 if brew tap 2>/dev/null | grep -q '^bell-sw/liberica$'; then
   brew trust bell-sw/liberica 2>/dev/null || true
 fi
 
-brew bundle --verbose
+# Install from Brewfile
+# TODO: Custom brew files for configs
+bundle_failed=0
+brew bundle --verbose || bundle_failed=1
+
+if (( bundle_failed )); then
+  echo "brew bundle reported failures — retrying known flaky installs..."
+  retry_flaky_bundle_installs || exit 1
+fi

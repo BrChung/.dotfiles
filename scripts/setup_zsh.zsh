@@ -24,10 +24,10 @@ fi
 OMZDIR="$HOME/.oh-my-zsh"
 if [ ! -d "$OMZDIR" ]; then
   echo 'Installing oh-my-zsh'
-  /bin/sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
+  env RUNZSH=no CHSH=no /bin/sh -c "$(curl -fsSL https://raw.githubusercontent.com/ohmyzsh/ohmyzsh/master/tools/install.sh)"
 else
   echo 'Updating oh-my-zsh'
-  upgrade_oh_my_zsh
+  git -C "$OMZDIR" pull --quiet --rebase 2>/dev/null || git -C "$OMZDIR" pull --quiet
 fi
 
 # Add homebrew zsh as an available login shell option

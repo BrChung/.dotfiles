@@ -20,6 +20,8 @@ if [[ $response =~ ^(yes|y| ) ]] || [[ -z $response ]]; then
     # Install Global NPM Packages
     npm install -g @angular/cli
     npm install -g npmrc
+    npm install -g corepack
+    corepack enable
 
     echo "Global NPM Packages Installed:"
     npm list --global --depth=0
