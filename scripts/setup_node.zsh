@@ -2,11 +2,13 @@
 
 echo "\n<<< Starting Node Setup >>>\n"
 
+export NVM_DIR="${NVM_DIR:-$HOME/.nvm}"
+
 # Node versions are managed with `nvm`, which is in the Brewfile.
-if [ -z "$(ls -A $NVM_DIR/versions/node)" ]; then
+if [[ ! -d "$NVM_DIR/versions/node" ]] || [[ -z "$(ls -A "$NVM_DIR/versions/node" 2>/dev/null)" ]]; then
     echo "No node versions found, you can install latest and continue installation by using:"
     echo "nvm install --lts && zsh scripts/setup_node.zsh"
-    exit
+    exit 0
 else
     echo "Found node installation"
 fi

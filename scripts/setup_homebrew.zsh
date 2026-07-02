@@ -42,4 +42,9 @@ fi
 # Install from Brewfile
 # TODO: Custom brew files for configs
 
-brew bundle --verbose --cleanup
+# Homebrew 5+ requires trusting third-party casks before install
+if brew tap 2>/dev/null | grep -q '^bell-sw/liberica$'; then
+  brew trust bell-sw/liberica 2>/dev/null || true
+fi
+
+brew bundle --verbose

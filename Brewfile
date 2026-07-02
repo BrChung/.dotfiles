@@ -1,7 +1,5 @@
 tap "aws/tap"
 tap "bell-sw/liberica"
-tap "homebrew/bundle"
-tap "homebrew/services"
 tap "pulumi/tap"
 # Zstandard is a real-time compression algorithm
 brew "zstd"
@@ -97,8 +95,6 @@ brew "poppler"
 brew "python@3.10"
 # Interpreted, interactive, object-oriented programming language
 brew "python@3.11"
-# Interpreted, interactive, object-oriented programming language
-brew "python@3.8"
 # Interpreted, interactive, object-oriented programming language
 brew "python@3.9"
 # Persistent key-value database, with built-in net interface
