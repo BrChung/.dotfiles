@@ -100,16 +100,20 @@ source $ZSH/oh-my-zsh.sh
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
 
-export HOMEBREW_PREFIX="$(brew --prefix)"
 export NVM_DIR="$HOME/.nvm"
-[ -s "$HOMEBREW_PREFIX/opt/nvm/nvm.sh" ] && \. "$HOMEBREW_PREFIX/opt/nvm/nvm.sh"  # This loads nvm
-[ -s "$HOMEBREW_PREFIX/opt/nvm/etc/bash_completion.d/nvm" ] && \. "$HOMEBREW_PREFIX/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
+if command -v brew &>/dev/null; then
+  export HOMEBREW_PREFIX="$(brew --prefix)"
+  [ -s "$HOMEBREW_PREFIX/opt/nvm/nvm.sh" ] && \. "$HOMEBREW_PREFIX/opt/nvm/nvm.sh"  # This loads nvm
+  [ -s "$HOMEBREW_PREFIX/opt/nvm/etc/bash_completion.d/nvm" ] && \. "$HOMEBREW_PREFIX/opt/nvm/etc/bash_completion.d/nvm"  # This loads nvm bash_completion
+fi
 
 # Rust
 [ -s "$HOME/.cargo/env" ] && . "$HOME/.cargo/env"
 
 # Set Go Path
-export PATH=$PATH:$(go env GOPATH)/bin
+if command -v go &>/dev/null; then
+  export PATH=$PATH:$(go env GOPATH)/bin
+fi
 
 export CPLUS_INCLUDE_PATH=/usr/local/include
 
@@ -121,4 +125,6 @@ export PATH="$PNPM_HOME:$PATH"
 # pnpm end
 
 # direnv
-eval "$(direnv hook zsh)"
+if command -v direnv &>/dev/null; then
+  eval "$(direnv hook zsh)"
+fi

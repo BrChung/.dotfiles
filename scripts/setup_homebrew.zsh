@@ -2,12 +2,41 @@
 
 echo "\n<<< Starting Homebrew Setup >>>\n"
 
+load_brew_shellenv() {
+  if [[ -x /opt/homebrew/bin/brew ]]; then
+    eval "$(/opt/homebrew/bin/brew shellenv)"
+  elif [[ -x /usr/local/bin/brew ]]; then
+    eval "$(/usr/local/bin/brew shellenv)"
+  fi
+}
+
+ensure_brew_shellenv_in_zprofile() {
+  local brew_bin shellenv_line
+  for brew_bin in /opt/homebrew/bin/brew /usr/local/bin/brew; do
+    if [[ -x "$brew_bin" ]]; then
+      shellenv_line="eval \"\$($brew_bin shellenv)\""
+      if ! grep -Fq "$brew_bin shellenv" "$HOME/.zprofile" 2>/dev/null; then
+        echo "$shellenv_line" >> "$HOME/.zprofile"
+      fi
+      return 0
+    fi
+  done
+  return 1
+}
+
 if exists brew; then
   echo "brew exists, skipping install"
 else
   echo "brew doesn't exist, continuing with install"
   /bin/bash -c "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/HEAD/install.sh)"
-  echo 'eval $(/opt/homebrew/bin/brew shellenv)' >> $HOME/.zprofile
+  ensure_brew_shellenv_in_zprofile
+fi
+
+load_brew_shellenv
+
+if ! exists brew; then
+  echo "brew is not available on PATH after install"
+  exit 1
 fi
 
 # Install from Brewfile
