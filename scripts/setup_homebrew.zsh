@@ -24,7 +24,7 @@ ensure_brew_shellenv_in_zprofile() {
   return 1
 }
 
-if exists brew; then
+if command -v brew &>/dev/null; then
   echo "brew exists, skipping install"
 else
   echo "brew doesn't exist, continuing with install"
@@ -34,7 +34,7 @@ fi
 
 load_brew_shellenv
 
-if ! exists brew; then
+if ! command -v brew &>/dev/null; then
   echo "brew is not available on PATH after install"
   exit 1
 fi
