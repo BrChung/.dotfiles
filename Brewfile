@@ -172,6 +172,8 @@ cask "rectangle"
 cask "spotify"
 # Mesh VPN based on WireGuard
 cask "tailscale-app"
+# Continuous file synchronization program
+brew "syncthing"
 # Open-source code editor
 cask "visual-studio-code"
 # Multimedia player

@@ -14,10 +14,39 @@
     ~/.config/bat:
       create: true
       path: config/bat
+    ~/bin/zen-sync-launch:
+      create: true
+      path: scripts/zen-sync-launch.sh
+    ~/bin/zensync:
+      create: true
+      path: scripts/zen-sync-launch.sh
+    ~/bin/zen-sync-watch:
+      create: true
+      path: scripts/zen-sync-watch.sh
+    ~/.config/zen-syncthing/env:
+      create: true
+      path: config/zen-syncthing/env
+    ~/.config/zen-syncthing/zen.ignore:
+      create: true
+      path: config/zen-syncthing/zen.ignore
 
 - create:
     - ~/Projects # All git repos should be here
     - ~/.nvm
+    - ~/bin
+    - ~/.config/zen-syncthing
+    - config/zen-syncthing
+
+- shell:
+    - command: |
+        if [ ! -f config/zen-syncthing/env ]; then
+          if [ -f ~/.config/zen-syncthing/env ] && [ ! -L ~/.config/zen-syncthing/env ]; then
+            cp ~/.config/zen-syncthing/env config/zen-syncthing/env
+          else
+            cp config/zen-syncthing/env.example config/zen-syncthing/env
+          fi
+        fi
+      description: Seed zen-syncthing env (machine-local, gitignored)
 
 - shell:
     - command: ./scripts/setup_homebrew.zsh
@@ -38,6 +67,36 @@
       stdout: true
     - command: git submodule update --init --recursive
       description: Installing submodules
+    - command: |
+        if command -v syncthing >/dev/null; then
+          brew services start syncthing 2>/dev/null || true
+          sleep 2
+          config_xml="$HOME/Library/Application Support/Syncthing/config.xml"
+          env_file="config/zen-syncthing/env"
+          if [[ -f "$config_xml" && -f "$env_file" ]] && ! rg -q '^SYNCTHING_API_KEY="[^"]+"' "$env_file"; then
+            api_key="$(python3 - <<'PY'
+        import xml.etree.ElementTree as ET
+        from pathlib import Path
+        root = ET.parse(Path.home() / "Library/Application Support/Syncthing/config.xml")
+        print(root.find(".//apikey").text or "")
+        PY
+        )"
+            if [[ -n "$api_key" ]]; then
+              sed -i '' "s|^SYNCTHING_API_KEY=.*|SYNCTHING_API_KEY=\"$api_key\"|" "$env_file"
+              echo "Auto-filled SYNCTHING_API_KEY in config/zen-syncthing/env"
+            fi
+          fi
+        fi
+      description: Start Syncthing and auto-fill API key
+    - command: |
+        chmod +x scripts/zen-sync-launch.sh scripts/zen-sync-watch.sh scripts/zen-sync-trigger.sh
+        plist_src="config/zen-syncthing/zen-sync-watch.plist"
+        plist_dest="$HOME/Library/LaunchAgents/co.brianchung.zen-sync-watch.plist"
+        sed "s|__HOME__|$HOME|g" "$plist_src" > "$plist_dest"
+        launchctl bootout "gui/$UID" "$plist_dest" 2>/dev/null || true
+        launchctl bootstrap "gui/$UID" "$plist_dest"
+        echo "Started zen-sync-watch (syncs after Zen quits, including Dock launches)"
+      description: Enable Zen sync watcher LaunchAgent
 
 # Link Oh My ZSH Plugins
 - link:

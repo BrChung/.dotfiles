@@ -72,6 +72,20 @@ ZSH_THEME="awesomepanda"
 # Add wisely, as too many plugins slow down shell startup.
 plugins=(git macos brew nvm pip python zsh-syntax-highlighting zsh-autosuggestions)
 
+# Inherited FPATH can omit Homebrew zsh core functions (e.g. after brew upgrade),
+# which breaks compinit and floods the terminal with errors.
+if [[ ! -f ${fpath[(r)*/functions/compinit]}(#qN) ]]; then
+  fpath=(
+    /opt/homebrew/share/zsh/functions(N)
+    /opt/homebrew/share/zsh/site-functions(N)
+    /usr/local/share/zsh/functions(N)
+    /usr/local/share/zsh/site-functions(N)
+    $fpath
+  )
+  fpath=(${^fpath}(N))
+  typeset -U fpath
+fi
+
 source $ZSH/oh-my-zsh.sh
 
 # User configuration
@@ -123,6 +137,9 @@ export LIBRARY_PATH=/usr/local/lib
 export PNPM_HOME="$HOME/Library/pnpm"
 export PATH="$PNPM_HOME:$PATH"
 # pnpm end
+
+# local scripts (zen-sync-launch, etc.)
+export PATH="$HOME/bin:$PATH"
 
 # direnv
 if command -v direnv &>/dev/null; then
