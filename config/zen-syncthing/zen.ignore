@@ -1,0 +1,25 @@
+// Cache and temporary files
+cache
+Cache
+Code Cache
+GPUCache
+ShaderCache
+startupCache
+thumbnails
+*.tmp
+*.bak
+
+// Lock files (crucial — never sync while Zen is open)
+parent.lock
+lock
+.parentlock
+
+// Session backups (local recovery only)
+sessionstore-backups
+recovery.jsonlz4
+recovery.baklz4
+
+// Crash reports and telemetry
+crashreports
+minidumps
+saved-telemetry-pings
