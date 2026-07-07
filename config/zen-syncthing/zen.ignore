@@ -14,6 +14,11 @@ parent.lock
 lock
 .parentlock
 
+// Profile registry (per-machine — never sync the zen/ root)
+profiles.ini
+installs.ini
+*.sync-conflict*
+
 // Session backups (local recovery only)
 sessionstore-backups
 recovery.jsonlz4
