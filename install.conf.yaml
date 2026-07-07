@@ -32,6 +32,12 @@
     ~/.config/bat:
       create: true
       path: config/bat
+    ~/.config/lsd:
+      create: true
+      path: config/lsd
+    ~/Library/Application Support/Code/User/settings.json:
+      create: true
+      path: config/vscode/settings.json
     ~/bin/zen-sync-launch:
       create: true
       path: scripts/zen-sync-launch.sh
@@ -60,6 +66,9 @@
     - command: ./scripts/setup_zsh.zsh
       description: Setting up ZSH
       stdin: true
+      stdout: true
+    - command: ./scripts/setup_terminal.zsh
+      description: Setting up Terminal fonts
       stdout: true
     - command: ./scripts/setup_node.zsh
       description: Setting up Node
