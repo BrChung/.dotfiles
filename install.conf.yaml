@@ -7,6 +7,24 @@
 
 - clean: ["~", "~/.oh-my-zsh/custom/", "~/.oh-my-zsh/custom/plugins/"]
 
+- create:
+    - ~/Projects # All git repos should be here
+    - ~/.nvm
+    - ~/bin
+    - ~/.config/zen-syncthing
+    - config/zen-syncthing
+
+- shell:
+    - command: |
+        if [ ! -f config/zen-syncthing/env ]; then
+          if [ -f ~/.config/zen-syncthing/env ] && [ ! -L ~/.config/zen-syncthing/env ]; then
+            cp ~/.config/zen-syncthing/env config/zen-syncthing/env
+          else
+            cp config/zen-syncthing/env.example config/zen-syncthing/env
+          fi
+        fi
+      description: Seed zen-syncthing env (machine-local, gitignored)
+
 - link:
     ~/.zshrc: zshrc
     ~/.zshenv: zshenv
@@ -29,24 +47,6 @@
     ~/.config/zen-syncthing/zen.ignore:
       create: true
       path: config/zen-syncthing/zen.ignore
-
-- create:
-    - ~/Projects # All git repos should be here
-    - ~/.nvm
-    - ~/bin
-    - ~/.config/zen-syncthing
-    - config/zen-syncthing
-
-- shell:
-    - command: |
-        if [ ! -f config/zen-syncthing/env ]; then
-          if [ -f ~/.config/zen-syncthing/env ] && [ ! -L ~/.config/zen-syncthing/env ]; then
-            cp ~/.config/zen-syncthing/env config/zen-syncthing/env
-          else
-            cp config/zen-syncthing/env.example config/zen-syncthing/env
-          fi
-        fi
-      description: Seed zen-syncthing env (machine-local, gitignored)
 
 - shell:
     - command: ./scripts/setup_homebrew.zsh
