@@ -40,11 +40,17 @@ else
 fi
 
 # Change shell to zsh installed by homebrew
-if [ "$SHELL" = "$ZSH_PATH" ]; then
-  echo "$SHELL is already $ZSH_PATH"
+LOGIN_SHELL="$(dscl . -read "/Users/$USER" UserShell 2>/dev/null | awk '{print $2}')"
+
+if [[ "$LOGIN_SHELL" = "$ZSH_PATH" ]]; then
+  echo "Login shell is already $ZSH_PATH"
 else
-  echo "Enter user password to change login shell"
-  chsh -s "$ZSH_PATH"
+  echo "Enter user password to change login shell to $ZSH_PATH"
+  if chsh -s "$ZSH_PATH"; then
+    echo "Login shell changed to $ZSH_PATH"
+  else
+    echo "Warning: could not change login shell — run manually: chsh -s $ZSH_PATH"
+  fi
 fi
 
 # Use ZSH instead of BASH for detault shell
