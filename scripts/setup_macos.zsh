@@ -9,7 +9,18 @@ if [[ $response =~ ^(no|n| ) ]] || [[ -z $response ]]; then
 fi
 
 
-osascript -e 'tell application "System Preferences" to quit'
+osascript -e 'tell application "System Settings" to quit' 2>/dev/null || \
+osascript -e 'tell application "System Preferences" to quit' 2>/dev/null || true
+
+# System Settings > Trackpad/Mouse > Natural scrolling (off = traditional scrolling)
+set_scroll_direction="$0:a:h/set_scroll_direction"
+if [[ ! -x "$set_scroll_direction" ]]; then
+    swiftc -F /System/Library/PrivateFrameworks \
+        -framework PreferencePanesSupport \
+        -o "$set_scroll_direction" \
+        "$set_scroll_direction.swift"
+fi
+"$set_scroll_direction"
 
 # Finder > Preferences > General > New Finder windows show:
 defaults write com.apple.finder NewWindowTarget -string 'PfLo'
