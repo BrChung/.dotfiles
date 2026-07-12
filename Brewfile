@@ -1,22 +1,12 @@
 tap "aws/tap"
-tap "bell-sw/liberica"
+tap "bell-sw/liberica", trusted: true
 tap "pulumi/tap"
-# Zstandard is a real-time compression algorithm
-brew "zstd"
-# TIFF library and utilities
-brew "libtiff"
-# Color management engine supporting ICC profiles
-brew "little-cms2"
-# Image format providing lossless and lossy compression for web images
-brew "webp"
-# New file format for still image compression
-brew "jpeg-xl"
 # Codec library for encoding and decoding AV1 video streams
 brew "aom"
+# Zstandard is a real-time compression algorithm
+brew "zstd"
 # CLI tool to build, test, debug, and deploy Serverless applications using AWS SAM
 brew "aws-sam-cli"
-# Interpreted, interactive, object-oriented programming language
-brew "python@3.12"
 # Official Amazon AWS command-line interface
 brew "awscli"
 # Clone of cat(1) with syntax highlighting and Git integration
@@ -31,16 +21,16 @@ brew "colima", restart_service: :changed
 brew "coreutils"
 # Apjanke's fork of the classic cowsay project
 brew "cowsay"
+# TIFF library and utilities
+brew "libtiff"
+# Color management engine supporting ICC profiles
+brew "little-cms2"
 # Secure runtime for JavaScript and TypeScript
 brew "deno"
 # Load/unload environment variables based on $PWD
 brew "direnv"
 # Pack, ship and run any application as a lightweight container
 brew "docker"
-# OpenType text shaping engine
-brew "harfbuzz"
-# Library for JPEG-2000 image manipulation
-brew "openjpeg"
 # Play, record, convert, and stream select audio and video codecs
 brew "ffmpeg"
 # Command-line tools for fly.io services
@@ -49,10 +39,18 @@ brew "flyctl"
 brew "gcc"
 # Library for encoding and decoding .avif files
 brew "libavif"
+# Image format providing lossless and lossy compression for web images
+brew "webp"
 # Graphics library to dynamically manipulate images
 brew "gd"
 # Toolkit for image loading and pixel buffer manipulation
 brew "gdk-pixbuf"
+# GitHub command-line tool
+brew "gh"
+# OpenType text shaping engine
+brew "harfbuzz"
+# Library for JPEG-2000 image manipulation
+brew "openjpeg"
 # Interpreter for PostScript and PDF
 brew "ghostscript"
 # Open source programming language to build simple/reliable/efficient software
@@ -65,6 +63,8 @@ brew "netpbm"
 brew "gts"
 # User-friendly cURL replacement (command-line HTTP client)
 brew "httpie"
+# New file format for still image compression
+brew "jpeg-xl"
 # Lightweight and flexible command-line JSON processor
 brew "jq"
 # Pager program similar to more
@@ -96,6 +96,8 @@ brew "python@3.10"
 # Interpreted, interactive, object-oriented programming language
 brew "python@3.11"
 # Interpreted, interactive, object-oriented programming language
+brew "python@3.12"
+# Interpreted, interactive, object-oriented programming language
 brew "python@3.9"
 # Persistent key-value database, with built-in net interface
 brew "redis", restart_service: :changed
@@ -105,6 +107,8 @@ brew "rust"
 brew "sl"
 # Generate type safe Go from SQL
 brew "sqlc"
+# Open source continuous file synchronization application
+brew "syncthing", restart_service: :changed
 # Display directories as trees (with optional color/HTML output)
 brew "tree"
 # Syntax-aware linter for prose
@@ -155,7 +159,7 @@ cask "iterm2"
 # JetBrains tools manager
 cask "jetbrains-toolbox"
 # 100% open-source Java implementation
-cask "bell-sw/liberica/liberica-jdk21"
+cask "bell-sw/liberica/liberica-jdk21", trusted: true
 # Provides updates to various Microsoft products
 cask "microsoft-auto-update"
 # Office suite
@@ -172,8 +176,6 @@ cask "rectangle"
 cask "spotify"
 # Mesh VPN based on WireGuard
 cask "tailscale-app"
-# Continuous file synchronization program
-brew "syncthing"
 # Open-source code editor
 cask "visual-studio-code"
 # Multimedia player
@@ -184,6 +186,11 @@ cask "wireshark-app"
 cask "zen"
 # Video communication and virtual meeting platform
 cask "zoom"
+mas "GarageBand", id: 682658836
+mas "iMovie", id: 408981434
+mas "Keynote", id: 409183694
+mas "Numbers", id: 409203825
+mas "Pages", id: 409201541
 vscode "akamud.vscode-theme-onedark"
 vscode "alexcvzz.vscode-sqlite"
 vscode "angular.ng-template"
@@ -196,7 +203,6 @@ vscode "dbaeumer.vscode-eslint"
 vscode "docker.docker"
 vscode "eamodio.gitlens"
 vscode "esbenp.prettier-vscode"
-vscode "github.copilot-chat"
 vscode "golang.go"
 vscode "graphql.vscode-graphql"
 vscode "graphql.vscode-graphql-execution"
@@ -237,3 +243,6 @@ vscode "yoavbls.pretty-ts-errors"
 go "github.com/air-verse/air"
 go "golang.org/x/tools/gopls"
 go "honnef.co/go/tools/cmd/staticcheck"
+npm "@angular/cli"
+npm "corepack"
+npm "npmrc"
