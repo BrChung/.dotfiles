@@ -6,3 +6,9 @@
 [user]
 	name = Brian Chung
 	email = brian@brianchung.co
+[credential "https://github.com"]
+	helper = 
+	helper = !/opt/homebrew/bin/gh auth git-credential
+[credential "https://gist.github.com"]
+	helper = 
+	helper = !/opt/homebrew/bin/gh auth git-credential
