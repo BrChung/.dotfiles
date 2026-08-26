@@ -1,5 +1,6 @@
 tap "aws/tap"
 tap "bell-sw/liberica", trusted: true
+tap "hashicorp/tap"
 tap "pulumi/tap"
 # Codec library for encoding and decoding AV1 video streams
 brew "aom"
@@ -91,6 +92,8 @@ brew "pkgconf"
 brew "pnpm"
 # PDF rendering library (based on the xpdf-3.0 code base)
 brew "poppler"
+# Protocol buffers (Google's data interchange format)
+brew "protobuf"
 # Interpreted, interactive, object-oriented programming language
 brew "python@3.10"
 # Interpreted, interactive, object-oriented programming language
@@ -121,6 +124,8 @@ brew "wget"
 brew "yt-dlp"
 # UNIX shell (command interpreter)
 brew "zsh"
+# Packer
+brew "hashicorp/tap/packer", trusted: true
 # Chromium based browser
 cask "arc"
 # Integrated CAD, CAM, CAE, and PCB software
@@ -129,6 +134,8 @@ cask "autodesk-fusion"
 cask "bambu-studio"
 # Menu bar icon organiser
 cask "bartender"
+# Desktop password and login vault
+cask "bitwarden"
 # Web browser focusing on privacy
 cask "brave-browser"
 # Open source IDE for exploring and testing APIs
@@ -172,6 +179,8 @@ cask "obsidian"
 cask "raycast"
 # Move and resize windows using keyboard shortcuts or snap areas
 cask "rectangle"
+# Team communication and collaboration software
+cask "slack"
 # Music streaming service
 cask "spotify"
 # Mesh VPN based on WireGuard
@@ -242,6 +251,8 @@ vscode "wix.vscode-import-cost"
 vscode "yoavbls.pretty-ts-errors"
 go "github.com/air-verse/air"
 go "golang.org/x/tools/gopls"
+go "google.golang.org/protobuf/cmd/protoc-gen-go"
+go "google.golang.org/grpc/cmd/protoc-gen-go-grpc"
 go "honnef.co/go/tools/cmd/staticcheck"
 npm "@angular/cli"
 npm "corepack"
