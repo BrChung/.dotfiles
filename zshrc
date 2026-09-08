@@ -138,7 +138,7 @@ export PNPM_HOME="$HOME/Library/pnpm"
 export PATH="$PNPM_HOME:$PATH"
 # pnpm end
 
-# local scripts (zen-sync-launch, etc.)
+# local scripts
 export PATH="$HOME/bin:$PATH"
 
 # direnv

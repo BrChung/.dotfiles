@@ -2,8 +2,12 @@
 
 alias ls='lsd'
 alias bbd='brew bundle dump --force --describe'
-# Prety print PATH variable (echo $PATH)
 alias trail='<<<${(F)path}'
 alias readlink='greadlink'
-# Use zensync — not `zen` (Homebrew links that to the browser binary)
-alias zensync='zen-sync-launch'
+caf() {
+  if (( $# == 1 )) && [[ $1 == <-> ]]; then
+    caffeinate -ims -t "$1"
+  else
+    caffeinate -ims "$@"
+  fi
+}

@@ -1,4 +1,3 @@
 Brewfile.lock.json
 .DS_Store
-config/zen-syncthing/env
 scripts/set_scroll_direction
