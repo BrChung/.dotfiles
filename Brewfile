@@ -110,8 +110,6 @@ brew "rust"
 brew "sl"
 # Generate type safe Go from SQL
 brew "sqlc"
-# Open source continuous file synchronization application
-brew "syncthing", restart_service: :changed
 # Display directories as trees (with optional color/HTML output)
 brew "tree"
 # Syntax-aware linter for prose
@@ -126,8 +124,6 @@ brew "yt-dlp"
 brew "zsh"
 # Packer
 brew "hashicorp/tap/packer", trusted: true
-# Chromium based browser
-cask "arc"
 # Integrated CAD, CAM, CAE, and PCB software
 cask "autodesk-fusion"
 # 3D model slicing software for 3D printers, maintained by Bambu Lab
