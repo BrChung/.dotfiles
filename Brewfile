@@ -138,8 +138,8 @@ cask "bitwarden"
 cask "brave-browser"
 # Open source IDE for exploring and testing APIs
 cask "bruno"
-# OpenAI's coding agent that runs in your terminal
-cask "codex"
+# OpenAI's official ChatGPT desktop app
+cask "chatgpt"
 # Write, edit, and chat about your code with AI
 cask "cursor"
 # Utilities designed to make common development tasks easier
@@ -157,6 +157,8 @@ cask "font-jetbrains-mono-nerd-font"
 cask "github"
 # Web browser
 cask "google-chrome"
+# Speech to text application
+cask "handy"
 # Chromium-based web browser
 cask "helium-browser"
 # HTTP and GraphQL Client
