@@ -24,6 +24,8 @@ brew "coreutils"
 brew "cowsay"
 # TIFF library and utilities
 brew "libtiff"
+# Image format providing lossless and lossy compression for web images
+brew "webp"
 # Color management engine supporting ICC profiles
 brew "little-cms2"
 # Secure runtime for JavaScript and TypeScript
@@ -40,8 +42,6 @@ brew "flyctl"
 brew "gcc"
 # Library for encoding and decoding .avif files
 brew "libavif"
-# Image format providing lossless and lossy compression for web images
-brew "webp"
 # Graphics library to dynamically manipulate images
 brew "gd"
 # Toolkit for image loading and pixel buffer manipulation
@@ -94,6 +94,8 @@ brew "pnpm"
 brew "poppler"
 # Protocol buffers (Google's data interchange format)
 brew "protobuf"
+# CLI for PlanetScale Database
+brew "pscale"
 # Interpreted, interactive, object-oriented programming language
 brew "python@3.10"
 # Interpreted, interactive, object-oriented programming language
@@ -136,6 +138,8 @@ cask "bitwarden"
 cask "brave-browser"
 # Open source IDE for exploring and testing APIs
 cask "bruno"
+# OpenAI's coding agent that runs in your terminal
+cask "codex"
 # Write, edit, and chat about your code with AI
 cask "cursor"
 # Utilities designed to make common development tasks easier
@@ -171,6 +175,8 @@ cask "microsoft-office"
 cask "moonlight"
 # Knowledge base that works on top of a local folder of plain text Markdown files
 cask "obsidian"
+# Local-first alternative to Logitech Options+ for HID++ devices
+cask "openlogi"
 # Control your tools with a few keystrokes
 cask "raycast"
 # Move and resize windows using keyboard shortcuts or snap areas

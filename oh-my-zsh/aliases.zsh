@@ -1,7 +1,7 @@
 # My custom aliases for zsh
 
 alias ls='lsd'
-alias bbd='brew bundle dump --force --describe'
+alias bbd='brew bundle dump --force'
 alias trail='<<<${(F)path}'
 alias readlink='greadlink'
 caf() {
