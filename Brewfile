@@ -153,6 +153,8 @@ cask "firefox"
 cask "font-geist-mono"
 cask "font-hack-nerd-font"
 cask "font-jetbrains-mono-nerd-font"
+# Set of tools to manage resources and applications hosted on Google Cloud
+cask "gcloud-cli"
 # Desktop client for GitHub repositories
 cask "github"
 # Web browser
@@ -187,6 +189,8 @@ cask "rectangle"
 cask "slack"
 # Music streaming service
 cask "spotify"
+# Minimal GUI for AI code agents
+cask "t3-code"
 # Mesh VPN based on WireGuard
 cask "tailscale-app"
 # Open-source code editor
@@ -259,6 +263,3 @@ go "golang.org/x/tools/gopls"
 go "google.golang.org/protobuf/cmd/protoc-gen-go"
 go "google.golang.org/grpc/cmd/protoc-gen-go-grpc"
 go "honnef.co/go/tools/cmd/staticcheck"
-npm "@angular/cli"
-npm "corepack"
-npm "npmrc"
