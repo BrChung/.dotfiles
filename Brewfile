@@ -140,6 +140,8 @@ cask "brave-browser"
 cask "bruno"
 # OpenAI's official ChatGPT desktop app
 cask "chatgpt"
+# Terminal-based AI coding assistant
+cask "claude-code"
 # Write, edit, and chat about your code with AI
 cask "cursor"
 # Utilities designed to make common development tasks easier
