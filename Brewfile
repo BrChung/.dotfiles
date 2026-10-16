@@ -199,6 +199,8 @@ cask "tailscale-app"
 cask "visual-studio-code"
 # Multimedia player
 cask "vlc"
+# Menu bar toolkit with keep-awake, system monitor and volume mixer
+cask "vorssaint"
 # Network protocol analyzer
 cask "wireshark-app"
 # Gecko based web browser
